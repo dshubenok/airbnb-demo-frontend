@@ -15,7 +15,7 @@ export default () => (
   <SectionWrapper>
     <Grid fluid>
       <Row>
-        <Col xs={12} sm={12} md={12} lg={12}>
+        <Col xs={12}>
           <Title>Featured destinations</Title>
         </Col>
       </Row>

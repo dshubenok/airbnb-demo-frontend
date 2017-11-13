@@ -19,14 +19,14 @@ export default () => (
     <SectionWrapper>
       <Grid fluid>
         <Row>
-          <Col xs={2} sm={1} md={1} lg={1}>
+          <Col xs={2} sm={1}>
             <VerticalCenterWrapper>
               <LogoLink href="#">
                 <Logo src={logo} />
               </LogoLink>
             </VerticalCenterWrapper>
           </Col>
-          <Col xs={10} sm={11} md={5} lg={5}>
+          <Col xs={10} sm={11} md={5}>
             <VerticalCenterWrapper>
               <Search placeholder="Try &quot;Miami&quot;" />
             </VerticalCenterWrapper>

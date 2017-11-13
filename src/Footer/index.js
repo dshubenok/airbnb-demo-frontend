@@ -27,15 +27,15 @@ export default () => (
       <Grid fluid>
         <Row>
           <Menu>
-            <Col xs={12} sm={3} md={3}>
+            <Col xs={12} sm={3}>
               <Row>
-                <Col xs={6} sm={12} md={12}>
+                <Col xs={6} sm={12}>
                   <Select>
                     <option default>English</option>
                     <option>Russian</option>
                   </Select>
                 </Col>
-                <Col xs={6} sm={12} md={12}>
+                <Col xs={6} sm={12}>
                   <Select>
                     <option default>United States dollar</option>
                     <option>RUB</option>
@@ -43,7 +43,7 @@ export default () => (
                 </Col>
               </Row>
             </Col>
-            <Col sm={2} smOffset={1} md={2} mdOffset={1} className="hidden-xs">
+            <Col sm={2} smOffset={1} className="hidden-xs">
               <LinkBold href="#">Airbnb</LinkBold>
               <Link href="#">About us</Link>
               <Link href="#">Careers</Link>
@@ -52,7 +52,7 @@ export default () => (
               <Link href="#">Help</Link>
               <Link href="#">Diversity & Belonging</Link>
             </Col>
-            <Col sm={2} smOffset={1} md={2} mdOffset={1} className="hidden-xs">
+            <Col sm={2} smOffset={1} className="hidden-xs">
               <LinkBold href="#">Discover</LinkBold>
               <Link href="#">Trust & Safety</Link>
               <Link href="#">Travel Credit</Link>
@@ -62,7 +62,7 @@ export default () => (
               <Link href="#">Guidebooks</Link>
               <Link href="#">Airbnbmag</Link>
             </Col>
-            <Col sm={2} smOffset={1} md={2} mdOffset={1} className="hidden-xs">
+            <Col sm={2} smOffset={1} className="hidden-xs">
               <LinkBold href="#">Hosting</LinkBold>
               <Link href="#">Why Host</Link>
               <Link href="#">Hospitality</Link>
@@ -73,14 +73,14 @@ export default () => (
         </Row>
         <Row>
           <FooterBottom>
-            <Col xs={12} sm={7} md={7}>
+            <Col xs={12} sm={7}>
               <BlockInline>
                 <img src={logoFooter} alt="logoAirbnb" />
 
                 <LinkCopyright href="#">© Airbnb Inc.</LinkCopyright>
               </BlockInline>
             </Col>
-            <Col xs={12} sm={5} md={5}>
+            <Col xs={12} sm={5}>
               <BlockInlineBottom>
                 <LinkBottom href="#">Terms</LinkBottom>
                 <LinkBottom href="#">Privacy</LinkBottom>

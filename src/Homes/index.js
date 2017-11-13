@@ -12,10 +12,10 @@ export default () => (
   <SectionWrapper>
     <Grid fluid>
       <Row>
-        <Col xs={8} sm={8} md={12} lg={12}>
+        <Col xs={8} md={12}>
           <Title>Homes</Title>
         </Col>
-        <Col xs={4} sm={4} className="hidden-md hidden-lg hidden-xl">
+        <Col xs={4} className="hidden-md hidden-lg hidden-xl">
           <SeeAll href="#">See All</SeeAll>
         </Col>
       </Row>

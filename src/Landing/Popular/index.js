@@ -7,7 +7,7 @@ import korean from "./korean.jpg";
 import german from "./german.jpg";
 import fine from "./fine.jpg";
 
-import { SectionWrapper, Title, SeeAll } from "../UI";
+import { SectionWrapper, Title, SeeAll } from "../../UI";
 import { ListCards, Card, PopularMoreButton } from "./styled";
 
 export default () => (

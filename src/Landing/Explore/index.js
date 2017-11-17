@@ -5,7 +5,7 @@ import homes from "./homes.png";
 import experiences from "./experiences.png";
 import restaurants from "./restaurants.png";
 
-import { SectionWrapper, Title } from "../UI";
+import { SectionWrapper, Title } from "../../UI";
 import { Scrolling, ExploreCards, Link, Img, CardTitle } from "./styled";
 
 export default () => (

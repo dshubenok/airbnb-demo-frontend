@@ -8,7 +8,7 @@ import capetown from "./capetown.jpg";
 import seoul from "./seoul.jpg";
 import losangeles from "./losangeles.jpg";
 
-import { MoreButton, SectionWrapper, Title } from "../UI";
+import { MoreButton, SectionWrapper, Title } from "../../UI";
 import { ListCards, Card } from "./styled";
 
 export default () => (

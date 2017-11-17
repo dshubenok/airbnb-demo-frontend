@@ -1,25 +1,18 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
-import Experiences from "./Experiences";
-import Explore from "./Explore";
-import Featured from "./Featured";
-import Footer from "./Footer";
-import Header from "./Header";
+import Landing from "./Landing";
 import Homes from "./Homes";
-import Popular from "./Popular";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Explore />
-        <Experiences />
-        <Homes />
-        <Popular />
-        <Featured />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path="/" exact component={Landing} />
+          <Route path="/homes" exact component={Homes} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { MoreButton } from "../UI";
+import { MoreButton } from "../../UI";
 
 export const PopularMoreButton = MoreButton.extend`
   top: 22%;

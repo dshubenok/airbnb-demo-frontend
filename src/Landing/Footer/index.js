@@ -6,7 +6,7 @@ import facebook from "./facebook.svg";
 import twitter from "./twitter.svg";
 import instagram from "./instagram.svg";
 
-import { SectionWrapper } from "../UI";
+import { SectionWrapper } from "../../UI";
 import {
   Footer,
   Menu,

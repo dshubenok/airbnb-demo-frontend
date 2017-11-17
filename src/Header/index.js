@@ -21,7 +21,7 @@ export default () => (
         <Row>
           <Col xs={2} sm={1}>
             <VerticalCenterWrapper>
-              <LogoLink href="#">
+              <LogoLink href="/">
                 <Logo src={logo} />
               </LogoLink>
             </VerticalCenterWrapper>

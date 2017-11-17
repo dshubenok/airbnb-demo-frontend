@@ -6,7 +6,7 @@ import forest from "./forest.jpg";
 import table from "./table.jpg";
 import salsa from "./salsa.jpg";
 
-import { SectionWrapper, Title, MoreButton, SeeAll } from "../UI";
+import { SectionWrapper, Title, MoreButton, SeeAll } from "../../UI";
 import { ListCards, Card } from "./styled";
 
 export default () => (

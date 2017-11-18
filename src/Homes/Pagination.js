@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import arrow from "./arrow.svg";
 
-const Pagination = styled.div`margin-bottom: 40px;`;
+const PaginationWrap = styled.div`margin-bottom: 40px;`;
 
 const Page = styled.a`
   display: inline-flex;
@@ -33,7 +33,7 @@ const ActivePage = Page.extend`
   color: #ffffff;
 `;
 
-const Container = styled.div`
+const PageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,7 @@ const NavButton = Page.extend`
   }
 `;
 
-const Position = styled.p`
+const Text = styled.p`
   font-family: inherit;
   line-height: 20px;
   font-size: 16px;
@@ -71,7 +71,7 @@ const Position = styled.p`
   margin-bottom: 39px;
 `;
 
-const Hint = styled.p`
+const PricingInfo = styled.p`
   margin: 0px;
   font-family: inherit;
   line-height: 20px;
@@ -82,19 +82,19 @@ const Hint = styled.p`
 `;
 
 export default props => (
-  <Pagination>
-    <Container>
+  <PaginationWrap>
+    <PageContainer>
       <ActivePage>1</ActivePage>
       <Page>2</Page>
       <Page>3</Page>
       <Page>...</Page>
       <Page>17</Page>
       <NavButton />
-    </Container>
-    <Position>1 – 18 of 300+ Rentals</Position>
-    <Hint>
+    </PageContainer>
+    <Text>1 – 18 of 300+ Rentals</Text>
+    <PricingInfo>
       Enter dates to see full pricing. Additional fees apply. Taxes may be
       added.
-    </Hint>
-  </Pagination>
+    </PricingInfo>
+  </PaginationWrap>
 );

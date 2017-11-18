@@ -5,38 +5,10 @@ import GoogleMap from "google-map-react";
 
 export const MapWrapper = styled.div`
   position: fixed;
-  top: 160px;
+  top: 158px;
   bottom: 0;
   right: 0;
   left: 64.4444444%;
-  left: calc(((992px) / 12 * 8 + (100% - 992px) / 2) + 8px);
-
-  @media screen and (min-width: 1200px) {
-    left: calc(((1200px) / 12 * 8 + (100% - 1200px) / 2) + 8px);
-  }
-`;
-
-export const FilterButton = styled.button`
-  margin: 12px 6px;
-  padding: 7px 16px;
-  border: 1px solid rgba(72, 72, 72, 0.2);
-  font-family: inherit;
-  line-height: 18px;
-  font-size: 14px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #fff;
-
-  &:focus {
-    background-color: #008489;
-    color: #fff;
-  }
-`;
-
-export const FilterWrapper = styled.div`
-  border-bottom: 0.5px rgba(72, 72, 72, 0.3) solid;
-  background-color: #ffffff;
 `;
 
 export const MapButton = styled.button`

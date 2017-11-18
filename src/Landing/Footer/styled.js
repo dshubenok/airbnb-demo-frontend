@@ -21,15 +21,14 @@ export const Select = styled.select`
   font-weight: 300;
   line-height: 21px;
   color: #383838;
-  padding: 12px 45px 13px 16px;
+  padding: 12px 35px 13px 16px;
   box-sizing: border-box;
   border-radius: 4px;
   appearance: none;
   background: url(${arrow}) no-repeat 90%;
-  border: 1px solid rgba(72, 72, 72, 0.2);
+  border: 1px solid rgba(72, 72, 72, 0.3);
   margin: 0 auto;
   font-size: 12px;
-  padding-right: 35px;
 
   &:-ms-expand {
     display: none;
@@ -38,12 +37,13 @@ export const Select = styled.select`
   @media (min-width: 576px) {
     max-width: 176px;
     font-size: 15px;
+    margin: 0 20px 16px 0;
   }
 
   @media (min-width: 768px) {
-    margin: 0 20px 16px 0;
     font-size: 18px;
     padding: 12px 45px 13px 16px;
+    max-width: initial;
   }
 `;
 

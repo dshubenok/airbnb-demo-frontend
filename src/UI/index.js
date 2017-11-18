@@ -7,16 +7,11 @@ import arrow from "./arrow.svg";
 
 export const SectionWrapper = styled.section`
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 1200px;
   padding: 0 8px;
 
-  @media (min-width: 768px) {
-    padding: 0;
-    max-width: 752px;
-  }
-
-  @media (min-width: 992px) {
-    max-width: 992px;
+  @media screen and (min-width: 768px) {
+    overflow: initial;
   }
 `;
 

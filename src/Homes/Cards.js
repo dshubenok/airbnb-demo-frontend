@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 
-// import CardOriginal from "./Card";
-
 import salentina from "./salentina.png";
 import your from "./your.png";
 import dreamy from "./dreamy.png";

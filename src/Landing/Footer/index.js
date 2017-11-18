@@ -37,7 +37,7 @@ export default () => (
                 </Col>
                 <Col xs={6} sm={12}>
                   <Select>
-                    <option default>United States</option>
+                    <option default>United States dollar</option>
                     <option>RUB</option>
                   </Select>
                 </Col>

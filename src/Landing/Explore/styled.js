@@ -1,17 +1,19 @@
+import React from "react";
 import styled from "styled-components";
+import { Link as RLink } from "react-router-dom";
 
-export const ExploreCards = styled.div`
+export const Cards = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 100%;
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled(RLink)`
   display: flex;
   background: #ffffff;
   box-sizing: border-box;
@@ -23,19 +25,19 @@ export const Link = styled.a`
   width: 100%;
   flex-direction: column;
 
-  @media (min-width: 576px) {
+  @media only screen and (min-width: 576px) {
     flex-direction: row;
   }
 `;
 
-export const CardTitle = styled.p`
-  padding-left: 0;
+export const CardName = styled.p`
+  padding-left: 0px;
   font-family: inherit;
   font-size: 17px;
   font-weight: 700;
   color: #383838;
 
-  @media (min-width: 576px) {
+  @media only screen and (min-width: 576px) {
     padding-left: 24px;
   }
 `;
@@ -43,15 +45,22 @@ export const CardTitle = styled.p`
 export const Img = styled.img`
   width: 100%;
 
-  @media (min-width: 576px) {
+  @media only screen and (min-width: 576px) {
     width: auto;
   }
 `;
 
-export const Scrolling = styled.div`
+export const CardsWrapper = styled.div`
   overflow: scroll;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     overflow: initial;
   }
 `;
+
+export const Card = props => (
+  <Link to={props.to}>
+    <Img src={props.src} alt={props.name} />
+    <CardName>{props.name}</CardName>
+  </Link>
+);

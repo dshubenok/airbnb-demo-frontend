@@ -1,17 +1,7 @@
 import React from "react";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Grid } from "react-flexbox-grid";
 
-import logo from "./logo.svg";
-
-import {
-  Header,
-  Wrapper,
-  LeftBlock,
-  LogoLink,
-  Link,
-  Search,
-  Nav
-} from "./styled";
+import { Header, Wrapper, LeftBlock, Link, Search, Nav } from "./styled";
 import Logo from "./Logo";
 
 export default props => (

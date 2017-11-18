@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-flexbox-grid";
 
+import CardOriginal from "./Card";
+
 import salentina from "./salentina.png";
 import your from "./your.png";
 import dreamy from "./dreamy.png";
@@ -9,40 +11,21 @@ import best from "./best.png";
 import lussuoso from "./lussuoso.png";
 import ins from "./ins.png";
 
-import { Stars, Text, BoldText } from "../UI";
+const Wrapper = styled.div`
+  margin: 12px 0px 0px;
 
-const Link = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  cursor: pointer;
-  color: inherit;
-  text-decoration: none;
+  @media screen and (min-width: 768px) {
+    margin: 4px 0px 0px;
+  }
 `;
 
-const CardName = Text.extend`padding: 8px 0 6px 0;`;
-const CardAbout = Text.extend`padding: 2px 0 6px 0;`;
+const Card = styled(CardOriginal)`
+  margin: 12px 0px;
 
-const Img = styled.img`width: 100%;`;
-
-const CardOrigin = props => (
-  <Link className={props.className} href={props.href}>
-    <Img src={props.src} alt={props.children} />
-    <CardName>
-      <BoldText>
-        ${props.price} {props.children}
-      </BoldText>
-    </CardName>
-    <CardAbout>
-      {props.type} · {props.beds} {props.beds > 1 ? "beds" : "bed"}
-    </CardAbout>
-    <Stars count={props.count} text="· Superhost" />
-  </Link>
-);
-
-const Wrapper = styled.div`margin: 4px 0px 0px;`;
-
-const Card = styled(CardOrigin)`margin: 20px 0px;`;
+  @media screen and (min-width: 576px) {
+    margin: 20px 0px;
+  }
+`;
 
 export default () => (
   <Wrapper>
@@ -54,12 +37,20 @@ export default () => (
           count={97}
           type="Entire house"
           beds={9}
+          to="#"
         >
           La Salentina, see, nature & relax
         </Card>
       </Col>
       <Col xs={12} md={6}>
-        <Card price={82} src={your} count={161} type="Entire house" beds={5}>
+        <Card
+          price={82}
+          src={your}
+          count={161}
+          type="Entire house"
+          beds={5}
+          to="#"
+        >
           Your private 3 bedr. riad and exclusi…
         </Card>
       </Col>
@@ -72,6 +63,7 @@ export default () => (
           count={364}
           type="Entire threehouse"
           beds={1}
+          to="#"
         >
           Dreamy Tropical Tree House
         </Card>
@@ -83,6 +75,7 @@ export default () => (
           count={369}
           type="Entire apartment"
           beds={1}
+          to="#"
         >
           Best location old town luxury loft
         </Card>
@@ -96,12 +89,20 @@ export default () => (
           count={105}
           type="Entire apartment"
           beds={6}
+          to="#"
         >
           Lussuoso. Vista incantevole.
         </Card>
       </Col>
       <Col xs={12} md={6}>
-        <Card price={72} src={ins} count={221} type="Entire house" beds={3}>
+        <Card
+          price={72}
+          src={ins}
+          count={221}
+          type="Entire house"
+          beds={3}
+          to="#"
+        >
           In the historical center of Lecce
         </Card>
       </Col>

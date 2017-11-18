@@ -24,7 +24,7 @@ export default () => (
           </Col>
           <Col lg={4} className="hidden-xs hidden-sm hidden-md">
             <MapWrapper>
-              <GMap center={{ lat: 59.95, lng: 30.33 }} zoom={11} />
+              <GMap center={{ lat: 45.8536, lng: 20.5234 }} zoom={11} />
             </MapWrapper>
           </Col>
         </Row>

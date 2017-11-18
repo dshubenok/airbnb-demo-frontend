@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import search from "./search.svg";
-import arrow from "./arrow.svg";
-import { Link as ReactLink } from "react-router-dom";
 
 export const Header = styled.header`
   padding: 16px 0px 18px;

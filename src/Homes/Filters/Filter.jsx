@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Dropdown from './Dropdown';
+import Dropdown from "./Dropdown";
 
 const Filter = styled.button`
   padding: 7px 16px;
@@ -10,9 +10,10 @@ const Filter = styled.button`
   border-radius: 4px;
   font-size: 14px;
   display: block;
-  background: ${props => (props.selected ? '#008489' : 'transparent')};
-  border: 1px solid ${props => (props.selected ? '#008489' : ' rgba(72, 72, 72, 0.2);')};
-  color: ${props => (props.selected ? '#fff' : '#383838')};
+  background: ${props => (props.selected ? "#008489" : "transparent")};
+  border: 1px solid
+    ${props => (props.selected ? "#008489" : " rgba(72, 72, 72, 0.2);")};
+  color: ${props => (props.selected ? "#fff" : "#383838")};
 
   &:first-child {
     margin-left: 0px;
@@ -22,7 +23,7 @@ const Filter = styled.button`
   }
 
   @media screen and (min-width: 576px) {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   @media screen and (min-width: 768px) {
@@ -32,7 +33,7 @@ const Filter = styled.button`
 
 export default class extends React.Component {
   state = {
-    selected: false,
+    selected: false
   };
 
   onClick = () => {
@@ -73,7 +74,9 @@ export default class extends React.Component {
           selected={this.state.selected}
           label={this.props.label}
           mobileLabel={
-            this.props.mobileLabel !== undefined ? this.props.mobileLabel : this.props.label
+            this.props.mobileLabel !== undefined
+              ? this.props.mobileLabel
+              : this.props.label
           }
           controls={this.props.controls}
           cancel={this.props.onCancel !== undefined ? this.onCancel : null}

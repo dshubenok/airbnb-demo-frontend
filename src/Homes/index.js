@@ -1,64 +1,37 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import { HeaderWrapper, Main, MapWrapper, MapButton, GMap } from "./styled";
 
-import salentina from "./salentina.jpg";
-import your from "./your.jpg";
-import dreamy from "./dreamy.jpg";
+import Header from "../Header";
+import Filters from "./Filters";
 
-import { SectionWrapper, Title, SeeAll } from "../UI";
-import { ListCardsWrapper, ListCards, Card, HomeMoreButton } from "./styled";
+import Cards from "./Cards";
+
+import Pagination from "./Pagination";
 
 export default () => (
-  <SectionWrapper>
-    <Grid fluid>
-      <Row>
-        <Col xs={8} md={12}>
-          <Title>Homes</Title>
-        </Col>
-        <Col xs={4} className="hidden-md hidden-lg hidden-xl">
-          <SeeAll href="#">See All</SeeAll>
-        </Col>
-      </Row>
-      <ListCardsWrapper>
+  <div>
+    <HeaderWrapper>
+      <Header />
+      <Filters />
+    </HeaderWrapper>
+    <Main>
+      <Grid>
         <Row>
-          <ListCards>
-            <Col xs={8} sm={5} md={4}>
-              <Card
-                price="$82"
-                src={salentina}
-                count="97"
-                type="Entire house"
-                beds="9"
-              >
-                La Salentina, see, nature & relax
-              </Card>
-            </Col>
-            <Col xs={8} sm={5} md={4}>
-              <Card
-                price="$82"
-                src={your}
-                count="161"
-                type="Entire house"
-                beds="5"
-              >
-                Your private 3 bedr. riad and exclusi…
-              </Card>
-            </Col>
-            <Col xs={8} sm={5} md={4}>
-              <Card
-                price="$200"
-                src={dreamy}
-                count="364"
-                type="Entire threehouse"
-                beds="1"
-              >
-                Dreamy Tropical Tree House
-              </Card>
-            </Col>
-            <HomeMoreButton />
-          </ListCards>
+          <Col xs={12} lg={8}>
+            <Cards />
+            <Pagination />
+          </Col>
+          <Col lg={4} className="hidden-xs hidden-sm hidden-md">
+            <MapWrapper>
+              <GMap center={{ lat: 45.8536, lng: 20.5234 }} zoom={11} />
+            </MapWrapper>
+          </Col>
         </Row>
-      </ListCardsWrapper>
-    </Grid>
-  </SectionWrapper>
+        <div className="hidden-lg hidden-xl">
+          <MapButton />
+        </div>
+      </Grid>
+    </Main>
+  </div>
 );

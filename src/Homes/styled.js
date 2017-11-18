@@ -1,58 +1,51 @@
 import React from "react";
 import styled from "styled-components";
+import mapIcon from "./map.svg";
+import GoogleMap from "google-map-react";
 
-import { BoldText, Text, Stars, MoreButton } from "../UI";
+export const MapWrapper = styled.div`
+  position: fixed;
+  top: 158px;
+  bottom: 0;
+  right: 0;
+  left: 64.4444444%;
+`;
 
-export const HomeMoreButton = MoreButton.extend`
-  top: 24%;
+export const MapButton = styled.button`
+  position: fixed;
+  right: 8px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(72, 72, 72, 0.16);
+  box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.16);
 
-  @media (min-width: 992px) {
-    top: 30%;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 20px;
+    background-image: url(${mapIcon});
+    background-repeat: no-repeat;
+    background-position: contain;
   }
 `;
 
-export const Link = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+export const HeaderWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 `;
 
-export const BlockTitle = Text.extend`padding: 8px 0 6px 0;`;
-export const BlockAbout = Text.extend`padding: 2px 0 6px 0;`;
+export const Main = styled.div`margin-top: 160px;`;
 
-export const ListCards = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: auto;
-
-  @media (min-width: 768px) {
-    width: 100%;
-  }
-`;
-
-export const Img = styled.img`max-width: 100%;`;
-
-export const Card = props => (
-  <Link>
-    <Img src={props.src} alt={props.children} />
-    <BlockTitle>
-      <BoldText>
-        {props.price} {props.children}
-      </BoldText>
-    </BlockTitle>
-    <BlockAbout>
-      {props.type} · {props.beds} {props.beds > 1 ? "beds" : "bed"}
-    </BlockAbout>
-    <Stars count={props.count} text="· Superhost" />
-  </Link>
+export const GMap = props => (
+  <GoogleMap defaultCenter={props.center} defaultZoom={props.zoom} />
 );
-
-export const ListCardsWrapper = styled.div`
-  overflow: scroll;
-
-  @media (min-width: 768px) {
-    overflow: initial;
-  }
-`;

@@ -20,7 +20,7 @@ export default () => (
         <Row>
           <ExploreCards>
             <Col xs={6} sm={5} md={4}>
-              <Link href="#">
+              <Link href="/homes">
                 <Img src={homes} />
                 <CardTitle>Homes</CardTitle>
               </Link>

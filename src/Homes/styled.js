@@ -74,6 +74,6 @@ export const HeaderWrapper = styled.div`
 
 export const Main = styled.div`margin-top: 160px;`;
 
-export const Map = props => (
+export const GMap = props => (
   <GoogleMap defaultCenter={props.center} defaultZoom={props.zoom} />
 );

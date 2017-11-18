@@ -7,10 +7,11 @@ import {
   Main,
   MapWrapper,
   MapButton,
-  Map
+  GMap
 } from "./styled";
 
 import Header from "../Header";
+import Filters from "./Filters";
 
 import Cards from "./Cards";
 
@@ -25,14 +26,7 @@ class Homes extends Component {
           <FilterWrapper>
             <Grid>
               <Row>
-                <FilterButton>Dates</FilterButton>
-                <FilterButton>Guests</FilterButton>
-                <div className="hidden-xs hidden-sm hidden-md">
-                  <FilterButton>Room type</FilterButton>
-                  <FilterButton>Price</FilterButton>
-                  <FilterButton>Instant book</FilterButton>
-                </div>
-                <FilterButton>More filters</FilterButton>
+                <Filters />
               </Row>
             </Grid>
           </FilterWrapper>
@@ -50,7 +44,7 @@ class Homes extends Component {
               </Col>
               <Col lg={4} className="hidden-xs hidden-sm hidden-md">
                 <MapWrapper>
-                  <Map center={{ lat: 45, lng: 20 }} zoom={10} />
+                  <GMap center={{ lat: 45, lng: 20 }} zoom={10} />
                 </MapWrapper>
               </Col>
             </Row>

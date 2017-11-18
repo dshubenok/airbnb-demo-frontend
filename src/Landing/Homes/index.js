@@ -24,7 +24,6 @@ export default () => (
           <ListCards>
             <Col xs={8} sm={5} md={4}>
               <Card
-                href="/homes"
                 price="$82"
                 src={salentina}
                 count="97"
@@ -36,7 +35,6 @@ export default () => (
             </Col>
             <Col xs={8} sm={5} md={4}>
               <Card
-                href="/homes"
                 price="$82"
                 src={your}
                 count="161"
@@ -48,7 +46,6 @@ export default () => (
             </Col>
             <Col xs={8} sm={5} md={4}>
               <Card
-                href="/homes"
                 price="$200"
                 src={dreamy}
                 count="364"

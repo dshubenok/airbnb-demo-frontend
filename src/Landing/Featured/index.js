@@ -8,40 +8,40 @@ import capetown from "./capetown.jpg";
 import seoul from "./seoul.jpg";
 import losangeles from "./losangeles.jpg";
 
-import { MoreButton, SectionWrapper, Title } from "../UI";
-import { ListCards, Card } from "./styled";
+import { MoreButton, Title } from "../../UI";
+import { Card, Cards, CardsWrapper } from "./styled";
 
 export default () => (
-  <SectionWrapper>
-    <Grid fluid>
+  <Grid>
+    <Row>
+      <Col xs={12}>
+        <Title>Featured destinations</Title>
+      </Col>
+    </Row>
+    <CardsWrapper>
       <Row>
-        <Col xs={12}>
-          <Title>Featured destinations</Title>
-        </Col>
-      </Row>
-      <Row>
-        <ListCards>
+        <Cards>
           <Col xs={4} sm={3} md={2}>
             <Card src={paris}>Paris</Card>
           </Col>
           <Col xs={4} sm={3} md={2}>
             <Card src={miami}>Miami</Card>
           </Col>
-          <Col sm={3} md={2} className="hidden-xs">
-            <Card src={tokyo}>Tokyo</Card>
-          </Col>
           <Col xs={4} sm={3} md={2}>
             <Card src={capetown}>Cape town</Card>
           </Col>
-          <Col md={2} className="hidden-xs hidden-sm">
+          <Col xs={4} sm={3} md={2}>
+            <Card src={tokyo}>Tokyo</Card>
+          </Col>
+          <Col xs={4} sm={3} md={2}>
             <Card src={seoul}>Seoul</Card>
           </Col>
-          <Col md={2} className="hidden-xs hidden-sm">
+          <Col xs={4} sm={3} md={2}>
             <Card src={losangeles}>Los Angeles</Card>
           </Col>
           <MoreButton />
-        </ListCards>
+        </Cards>
       </Row>
-    </Grid>
-  </SectionWrapper>
+    </CardsWrapper>
+  </Grid>
 );

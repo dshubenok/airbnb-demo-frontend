@@ -5,41 +5,30 @@ import homes from "./homes.png";
 import experiences from "./experiences.png";
 import restaurants from "./restaurants.png";
 
-import { SectionWrapper, Title } from "../UI";
-import { Scrolling, ExploreCards, Link, Img, CardTitle } from "./styled";
+import { Title } from "../../UI";
+import { Card, Cards, CardsWrapper } from "./styled";
 
 export default () => (
-  <SectionWrapper>
-    <Grid fluid>
+  <Grid>
+    <Row>
+      <Col xs={12}>
+        <Title>Explore Airbnb</Title>
+      </Col>
+    </Row>
+    <CardsWrapper>
       <Row>
-        <Col xs={12}>
-          <Title>Explore Airbnb</Title>
-        </Col>
+        <Cards>
+          <Col xs={6} sm={5} md={4}>
+            <Card src={homes} name="Homes" to="/homes" />
+          </Col>
+          <Col xs={6} sm={5} md={4}>
+            <Card src={experiences} name="Experiences" to="#exp" />
+          </Col>
+          <Col xs={6} sm={5} md={4}>
+            <Card src={restaurants} name="Restaurants" to="#rest" />
+          </Col>
+        </Cards>
       </Row>
-      <Scrolling>
-        <Row>
-          <ExploreCards>
-            <Col xs={6} sm={5} md={4}>
-              <Link href="#">
-                <Img src={homes} />
-                <CardTitle>Homes</CardTitle>
-              </Link>
-            </Col>
-            <Col xs={6} sm={5} md={4}>
-              <Link href="#">
-                <Img src={experiences} />
-                <CardTitle>Experiences</CardTitle>
-              </Link>
-            </Col>
-            <Col xs={6} sm={5} md={4}>
-              <Link href="#">
-                <Img src={restaurants} />
-                <CardTitle>Restaurants</CardTitle>
-              </Link>
-            </Col>
-          </ExploreCards>
-        </Row>
-      </Scrolling>
-    </Grid>
-  </SectionWrapper>
+    </CardsWrapper>
+  </Grid>
 );

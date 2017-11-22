@@ -6,99 +6,98 @@ import facebook from "./facebook.svg";
 import twitter from "./twitter.svg";
 import instagram from "./instagram.svg";
 
-import { SectionWrapper } from "../UI";
 import {
   Footer,
   Menu,
+  MenuTitle,
   Select,
-  LinkBold,
   Link,
-  FooterBottom,
-  BlockInline,
+  Copyright,
   LinkCopyright,
-  BlockInlineBottom,
+  Bottom,
+  MenuBottom,
   LinkBottom,
-  SocialIcon
+  Social,
+  SocialLink
 } from "./styled";
 
 export default () => (
   <Footer>
-    <SectionWrapper>
-      <Grid fluid>
-        <Row>
-          <Menu>
-            <Col xs={12} sm={3}>
-              <Row>
-                <Col xs={6} sm={12}>
-                  <Select>
-                    <option default>English</option>
-                    <option>Russian</option>
-                  </Select>
-                </Col>
-                <Col xs={6} sm={12}>
-                  <Select>
-                    <option default>United States dollar</option>
-                    <option>RUB</option>
-                  </Select>
-                </Col>
-              </Row>
-            </Col>
-            <Col sm={2} smOffset={1} className="hidden-xs">
-              <LinkBold href="#">Airbnb</LinkBold>
-              <Link href="#">About us</Link>
-              <Link href="#">Careers</Link>
-              <Link href="#">Press</Link>
-              <Link href="#">Policies</Link>
-              <Link href="#">Help</Link>
-              <Link href="#">Diversity & Belonging</Link>
-            </Col>
-            <Col sm={2} smOffset={1} className="hidden-xs">
-              <LinkBold href="#">Discover</LinkBold>
-              <Link href="#">Trust & Safety</Link>
-              <Link href="#">Travel Credit</Link>
-              <Link href="#">Gift Cards</Link>
-              <Link href="#">Airbnb Citizen</Link>
-              <Link href="#">Business Travel</Link>
-              <Link href="#">Guidebooks</Link>
-              <Link href="#">Airbnbmag</Link>
-            </Col>
-            <Col sm={2} smOffset={1} className="hidden-xs">
-              <LinkBold href="#">Hosting</LinkBold>
-              <Link href="#">Why Host</Link>
-              <Link href="#">Hospitality</Link>
-              <Link href="#">Responsible Hosting</Link>
-              <Link href="#">Community Center</Link>
-            </Col>
-          </Menu>
-        </Row>
-        <Row>
-          <FooterBottom>
-            <Col xs={12} sm={7}>
-              <BlockInline>
-                <img src={logoFooter} alt="logoAirbnb" />
-
-                <LinkCopyright href="#">© Airbnb Inc.</LinkCopyright>
-              </BlockInline>
-            </Col>
-            <Col xs={12} sm={5}>
-              <BlockInlineBottom>
-                <LinkBottom href="#">Terms</LinkBottom>
-                <LinkBottom href="#">Privacy</LinkBottom>
-                <LinkBottom href="#">Site map</LinkBottom>
-                <LinkBottom href="#">
-                  <SocialIcon src={facebook} alt="Facebook" />
-                </LinkBottom>
-                <LinkBottom href="#">
-                  <SocialIcon src={twitter} alt="Twitter" />
-                </LinkBottom>
-                <LinkBottom href="#">
-                  <SocialIcon src={instagram} alt="Instagram" />
-                </LinkBottom>
-              </BlockInlineBottom>
-            </Col>
-          </FooterBottom>
-        </Row>
-      </Grid>
-    </SectionWrapper>
+    <Grid>
+      <Row>
+        <Menu>
+          <Col xs={12} sm={3}>
+            <Row>
+              <Col xs={6} sm={12}>
+                <Select>
+                  <option default>English</option>
+                  <option>Russian</option>
+                </Select>
+              </Col>
+              <Col xs={6} sm={12}>
+                <Select>
+                  <option default>United States dollar</option>
+                  <option>RUB</option>
+                </Select>
+              </Col>
+            </Row>
+          </Col>
+          <Col sm={2} smOffset={1} className="hidden-xs">
+            <MenuTitle>Airbnb</MenuTitle>
+            <Link href="#aboutus">About us</Link>
+            <Link href="#careers">Careers</Link>
+            <Link href="#press">Press</Link>
+            <Link href="#policies">Policies</Link>
+            <Link href="#help">Help</Link>
+            <Link href="#diversity">Diversity & Belonging</Link>
+          </Col>
+          <Col sm={2} smOffset={1} className="hidden-xs">
+            <MenuTitle>Discover</MenuTitle>
+            <Link href="#trust">Trust & Safety</Link>
+            <Link href="#travel">Travel Credit</Link>
+            <Link href="#giftcards">Gift Cards</Link>
+            <Link href="#citizen">Airbnb Citizen</Link>
+            <Link href="#bussiness">Business Travel</Link>
+            <Link href="#guidebooks">Guidebooks</Link>
+            <Link href="#airbnbmag">Airbnbmag</Link>
+          </Col>
+          <Col sm={2} smOffset={1} className="hidden-xs">
+            <MenuTitle>Hosting</MenuTitle>
+            <Link href="#whyhost">Why Host</Link>
+            <Link href="#hospitality">Hospitality</Link>
+            <Link href="#responsiblehost">Responsible Hosting</Link>
+            <Link href="#communitycenter">Community Center</Link>
+          </Col>
+        </Menu>
+      </Row>
+      <Row>
+        <Bottom>
+          <Col xs={12} sm={5}>
+            <Copyright>
+              <img src={logoFooter} alt="logoAirbnb" />
+              <LinkCopyright href="#airbnb">© Airbnb Inc.</LinkCopyright>
+            </Copyright>
+          </Col>
+          <Col xs={12} sm={7}>
+            <MenuBottom>
+              <LinkBottom href="#terms">Terms</LinkBottom>
+              <LinkBottom href="#privacy">Privacy</LinkBottom>
+              <LinkBottom href="#sitemap">Site map</LinkBottom>
+              <Social>
+                <SocialLink href="#facebook">
+                  <img src={facebook} alt="Facebook" />
+                </SocialLink>
+                <SocialLink href="#twitter">
+                  <img src={twitter} alt="Twitter" />
+                </SocialLink>
+                <SocialLink href="#instagram">
+                  <img src={instagram} alt="Instagram" />
+                </SocialLink>
+              </Social>
+            </MenuBottom>
+          </Col>
+        </Bottom>
+      </Row>
+    </Grid>
   </Footer>
 );

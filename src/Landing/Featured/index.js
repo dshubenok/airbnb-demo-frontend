@@ -28,10 +28,10 @@ export default () => (
             <Card src={miami}>Miami</Card>
           </Col>
           <Col xs={4} sm={3} md={2}>
-            <Card src={capetown}>Cape town</Card>
+            <Card src={tokyo}>Tokyo</Card>
           </Col>
           <Col xs={4} sm={3} md={2}>
-            <Card src={tokyo}>Tokyo</Card>
+            <Card src={capetown}>Cape town</Card>
           </Col>
           <Col xs={4} sm={3} md={2}>
             <Card src={seoul}>Seoul</Card>

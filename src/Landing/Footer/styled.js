@@ -40,7 +40,7 @@ export const Select = styled.select`
     display: none;
   }
 
-  @media only (min-width: 576px) {
+  @media (min-width: 576px) {
     max-width: 176px;
     font-size: 15px;
     margin: 0 20px 16px 0;

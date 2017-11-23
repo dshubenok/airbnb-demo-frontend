@@ -13,7 +13,9 @@ const Link = styled(ReactLink)`
   text-decoration: none;
 `;
 
-const Name = Text.extend`padding: 8px 0 0 0;`;
+const Name = Text.extend`
+  padding: 8px 0 0 0;
+`;
 
 const About = Text.extend`
   padding: 2px 0 6px 0;
@@ -24,7 +26,9 @@ const About = Text.extend`
   }
 `;
 
-const Img = styled.img`width: 100%;`;
+const Img = styled.img`
+  width: 100%;
+`;
 
 export default props => (
   <Link to={props.to} className={props.className}>

@@ -3,6 +3,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 
 import Header from "../Header";
 import Pagination from "./Pagination";
+import Filters from "./Filters";
 
 import la from "./la.jpg";
 import your from "./your.jpg";
@@ -25,6 +26,7 @@ export default () => (
   <div>
     <HeaderWrapper>
       <Header />
+      <Filters />
     </HeaderWrapper>
     <Main>
       <Grid>

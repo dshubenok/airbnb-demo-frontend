@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import GoogleMap from "google-map-react";
 
 import Header from "../Header";
 import Pagination from "./Pagination";
@@ -18,8 +19,7 @@ import {
   Wrapper,
   Card,
   MapWrapper,
-  MapButton,
-  GoogleMap
+  MapButton
 } from "./styled";
 
 export default () => (

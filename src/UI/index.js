@@ -6,6 +6,7 @@ import more from "./more.png";
 import arrow from "./arrow.svg";
 
 export const Title = styled.h3`
+  padding-top: 16px;
   font-family: inherit;
   font-weight: 700;
   line-height: 34px;

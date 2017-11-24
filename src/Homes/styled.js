@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import React from "react";
 import CardOriginal from "./Card";
 import mapIcon from "./map.svg";
-import GMap from "google-map-react";
 
 export const HeaderWrapper = styled.div`
   position: fixed;
@@ -73,7 +71,3 @@ export const MapButton = styled.button`
     background-position: contain;
   }
 `;
-
-export const GoogleMap = props => (
-  <GMap defaultCenter={props.center} defaultZoom={props.zoom} />
-);

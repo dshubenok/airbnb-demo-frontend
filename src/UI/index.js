@@ -5,22 +5,8 @@ import stars from "./stars.svg";
 import more from "./more.png";
 import arrow from "./arrow.svg";
 
-export const SectionWrapper = styled.section`
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0 8px;
-
-  @media (min-width: 768px) {
-    padding: 0;
-    max-width: 752px;
-  }
-
-  @media (min-width: 992px) {
-    max-width: 992px;
-  }
-`;
-
 export const Title = styled.h3`
+  padding-top: 16px;
   font-family: inherit;
   font-weight: 700;
   line-height: 34px;

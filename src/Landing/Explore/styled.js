@@ -1,6 +1,8 @@
+import React from "react";
 import styled from "styled-components";
+import { Link as ReactLink } from "react-router-dom";
 
-export const ExploreCards = styled.div`
+export const Cards = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -11,7 +13,7 @@ export const ExploreCards = styled.div`
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled(ReactLink)`
   display: flex;
   background: #ffffff;
   box-sizing: border-box;
@@ -28,8 +30,8 @@ export const Link = styled.a`
   }
 `;
 
-export const CardTitle = styled.p`
-  padding-left: 0;
+export const CardName = styled.p`
+  padding-left: 0px;
   font-family: inherit;
   font-size: 17px;
   font-weight: 700;
@@ -48,10 +50,17 @@ export const Img = styled.img`
   }
 `;
 
-export const Scrolling = styled.div`
+export const CardsWrapper = styled.div`
   overflow: scroll;
 
   @media (min-width: 768px) {
     overflow: initial;
   }
 `;
+
+export const Card = props => (
+  <Link to={props.to}>
+    <Img src={props.src} alt={props.name} />
+    <CardName>{props.name}</CardName>
+  </Link>
+);
